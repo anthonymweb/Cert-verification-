@@ -116,7 +116,7 @@ app.get('/generate-pdf/:certId', async (req, res) => {
 
   if (!cert) return res.send("❌ Certificate not found");
 
-  const verifyLink = `https://your-app.repl.co/verify?certId=${certId}`;
+  const verifyLink = `https://verifyme-lx9f.onrender.com/verify?certId=${certId}`;
   const qrDataURL = await QRCode.toDataURL(verifyLink);
 
   const doc = new PDFDocument({ size: 'A4' });
