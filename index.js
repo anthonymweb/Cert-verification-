@@ -13,7 +13,7 @@ const fs = require('fs');
 
 // 🔐 Connect to MongoDB (from Replit Secrets or inline for now)
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://anthonyl:Seeminss123.@cluster0.jzgad4i.mongodb.net/certdb?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -24,6 +24,7 @@ mongoose.connect(process.env.MONGO_URI, {
 app.get('/', (req, res) => {
   res.redirect('/verify');
 });
+
 
 // 🧾 GET form page
 app.get('/verify', async (req, res) => {
