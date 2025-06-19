@@ -2,7 +2,7 @@ const QRCode = require('qrcode');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Certificate = require('Certificate');
+const Certificate = require('./models/Certificate');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
