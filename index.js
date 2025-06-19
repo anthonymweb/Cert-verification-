@@ -58,7 +58,7 @@ app.post('/verify', async (req, res) => {
 // qrcode generation endpoint 
 app.get('/generate-qr/:certId', async (req, res) => {
   const certId = req.params.certId;
-  const url = `https://your-app-name.username.repl.co/verify?certId=${certId}`;
+  const url = `https://verifyme-lx9f.onrender.com/verify?certId=${certId}`;
 
   try {
     const qrImage = await QRCode.toDataURL(url);
@@ -91,7 +91,7 @@ app.post('/admin', async (req, res) => {
       status: "valid"
     });
 
-    const qrLink = `https://your-app-name.username.repl.co/verify?certId=${certId}`;
+    const qrLink = `https://verifyme-lx9f.onrender.com/verify?certId=${certId}`;
     const qrImage = await QRCode.toDataURL(qrLink);
 
     res.render('admin', {
