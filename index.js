@@ -12,7 +12,7 @@ const PDFDocument = require('pdfkit');
 const fs = require('fs');
 
 // 🔐 Connect to MongoDB (from Replit Secrets or inline for now)
-mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://anthonyl:Seeminss123.@cluster0.jzgad4i.mongodb.net/certdb?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGO_URI || {
 
 });
 
